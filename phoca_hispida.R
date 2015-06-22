@@ -1,7 +1,7 @@
 library(gdata);
 
 # Process sheet3: Phoca hispida
-ph = read.xls("measurements.xlsx", sheet=3);
+ph = read.xls("measurements_reduceddecimals.xlsx", sheet=3);
 range = 3:23;
 
 ph_scapula_DHA = cbind(ph[range,7], ph[range,19]);

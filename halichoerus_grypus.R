@@ -1,8 +1,8 @@
 library(gdata);
 
 # Process sheet2: Halichoerus grypus
-hg = read.xls("measurements.xlsx", sheet=2);
-range = 3:15;
+hg = read.xls("measurements_reduceddecimals.xlsx", sheet=2);
+range = 3:16;
 
 hg_scapula_DHA = cbind(hg[range,7], hg[range,19]);
 hg_scapula_GLP = cbind(hg[range,11], hg[range,23]);

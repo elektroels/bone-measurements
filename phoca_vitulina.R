@@ -2,7 +2,7 @@ library(gdata);
 library(xlsx);
 
 # Process sheet1: Phoca Vitulina
-pv = read.xls("measurements.xlsx", sheet=1);
+pv = read.xls("measurements_reduceddecimals.xlsx", sheet=1);
 
 pv_scapula_DHA = cbind(pv[3:29,7], pv[3:29,19]);
 pv_scapula_GLP = cbind(pv[3:29,11], pv[3:29,23]);
@@ -19,9 +19,9 @@ wc_pv_scapula_DHA = wilcox.test(pv_scapula_DHA[,1],pv_scapula_DHA[,2], paired=TR
 print("pv_scapula_DHA");
 print(wc_pv_scapula_DHA);
 
-#phoca_vitulani <- createWorkbook();
+#phoca_vitulina <- createWorkbook();
 #print(pv_scapula_DHA);
-#write.xlsx(pv_scapula_DHA, "phoca_vitulani.xlsx");
+#write.xlsx(pv_scapula_DHA, "phoca_vitulina.xlsx");
 
 
 wc_pv_scapula_GLP = wilcox.test(pv_scapula_GLP[,1],pv_scapula_GLP[,2], paired=TRUE);
