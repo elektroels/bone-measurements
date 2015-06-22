@@ -1,7 +1,7 @@
 library(gdata);
 library(xlsx);
 
-# Process sheet1: Phoca Vitulani
+# Process sheet1: Phoca Vitulina
 pv = read.xls("measurements.xlsx", sheet=1);
 
 pv_scapula_DHA = cbind(pv[3:29,7], pv[3:29,19]);
