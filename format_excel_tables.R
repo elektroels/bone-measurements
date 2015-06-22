@@ -4,7 +4,6 @@ library(gdata);
 
 # Process sheet1: Phoca Vitulani
 pv = read.xls("measurements.xlsx", sheet=1);
-
 pv_scapula_DHA = cbind(pv[3:29,7], pv[3:29,19]);
 pv_scapula_GLP = cbind(pv[3:29,11], pv[3:29,23]);
 pv_scapula_GLM = cbind(pv[3:29,15], pv[3:29,27]);
@@ -19,7 +18,6 @@ pv_ulna_SBD = cbind(pv[3:29,67],pv[3:29,75]);
 # Process sheet2: Halichoerus grypus
 hg = read.xls("measurements.xlsx", sheet=2);
 range = 3:15;
-
 hg_scapula_DHA = cbind(hg[range,7], hg[range,19]);
 hg_scapula_GLP = cbind(hg[range,11], hg[range,23]);
 hg_scapula_GLM = cbind(hg[range,15], hg[range,27]);
@@ -30,8 +28,8 @@ hg_radius_SBD = cbind(hg[range,51],hg[range,59]);
 hg_ulna_GL = cbind(hg[range,63],hg[range,71]);
 hg_ulna_SBD = cbind(hg[range,67],hg[range,75]);
 
+# Process sheet3: Phoca hispida
 
-# TODO: load in sheet3 and process it
 ph = read.xls("measurements.xlsx", sheet=3);
 range = 3:23;
 ph_scapula_DHA = cbind(ph[range,7], ph[range,19]);
@@ -43,9 +41,3 @@ ph_radius_GL = cbind(ph[range,47], ph[range,55]);
 ph_radius_SBD  = cbind(ph[range,51], ph[range,59]);
 ph_ulna_GL = cbind(ph[range,63], ph[range,71]);
 ph_ulna_SBD = cbind(ph[range,67], ph[range,75]);
-
-# TODO: perform wilcoxons signed rank test on all the subjects :-)
-r1 = wilcox.test(pv_scapula_DHA[1],pv_scapula[2],paired=TRUE);
-
-
-
